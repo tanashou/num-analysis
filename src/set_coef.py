@@ -1,13 +1,12 @@
-def set_coef(np, nband, matrix, nelem, elem, nnode, node):  # 各行列要素を初期化
-    # 各行列要素を初期化
+def set_coef(np, nband, matrix, nelem, elem, nnode, node):
+    # Initialize matrix elements
     for i in range(np):
-        for j in range(matrix[i].nk):
-            matrix[i].h += [0.0]
+        matrix[i].h = [0.0] * matrix[i].nk
 
     for i in range(nelem):
         for j in range(3):
             l = elem[i].node[j]
-            if l > np:
+            if l > np or l < 1:
                 continue
 
             for k in range(3):
@@ -17,4 +16,7 @@ def set_coef(np, nband, matrix, nelem, elem, nnode, node):  # 各行列要素を
                 elif m < 1:
                     continue
                 else:
-                    matrix[l - 1].h[m - 1] += elem[i].Se[j][k]
+                    # Calculate the position in the band matrix
+                    pos = m - l
+                    if 0 <= pos < matrix[l - 1].nk:
+                        matrix[l - 1].h[pos] += elem[i].Se[j][k]
