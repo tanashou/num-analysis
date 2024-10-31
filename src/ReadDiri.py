@@ -1,7 +1,7 @@
-from fem2d import Diri
+from Fem2D import Diri
 
 
-def read_diri(filename):
+def ReadDiri(filename):
     ndiri = 0  # 固定領域数
     diri = []  # 固定境界配列
     nbound = 0  # 固定境界節点数

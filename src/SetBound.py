@@ -1,4 +1,4 @@
-def set_bound(nnode, node, ndiri, diri):  # 固定境界の設定
+def SetBound(nnode, node, ndiri, diri):  # 固定境界の設定
     for i in range(nnode):
         node[i].A = 0.0
 

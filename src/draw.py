@@ -1,14 +1,11 @@
 import matplotlib.pyplot as plt
 
 
-def draw(nelem, elem, nnode, node):
-    # グラフのセットアップ
+def Draw(nelem, elem, nnode, node):  # グラフ描画
     fig = plt.figure()
     graph = fig.add_subplot(111)
     graph.set_xlim([-2, 8])
     graph.set_ylim([-2, 8])
-
-    # カラーマップ
     color = [
         "#8a008a",
         "#3200ff",
@@ -29,7 +26,6 @@ def draw(nelem, elem, nnode, node):
         x1, y1 = node[n1 - 1].x, node[n1 - 1].y
         x2, y2 = node[n2 - 1].x, node[n2 - 1].y
         x3, y3 = node[n3 - 1].x, node[n3 - 1].y
-
         tri = plt.Polygon(((x1, y1), (x2, y2), (x3, y3)), fc="#ffffaa", ec="#000000")
         graph.add_patch(tri)
 
