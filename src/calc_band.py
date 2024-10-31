@@ -15,14 +15,15 @@ def calc_band(nelem, elem, np):
                 m = elem[i].node[k]
                 if m > np or m < 1:
                     continue
-                nd = m - 1 + 1
+                nd = m - l + 1
                 if nd > matrix[l - 1].nk:
                     matrix[l - 1].nk = nd
 
     # 最大バンド幅の計算
     nband = matrix[0].nk
     for i in range(1, np):
-        nd = matrix[i].nk - 1  # インデックスの調整
+        j = i
+        nd = matrix[j-1].nk - 1  # インデックスの調整
         if matrix[i].nk < nd:
             matrix[i].nk = nd
         if nband < matrix[i].nk:

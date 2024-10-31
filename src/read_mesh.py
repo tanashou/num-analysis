@@ -2,6 +2,7 @@ from fem2d import Elem, Node
 
 
 def read_mesh(filename):  # メッシュの読み込み
+    nelem = 0  # 要素数
     elem = []  # 要素配列
     nnode = 0  # 節点数
     node = []  # 節点配列
