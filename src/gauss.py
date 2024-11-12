@@ -15,7 +15,7 @@ def Gauss(np, nband, matrix, node):  # ガウスの消去法による連立1次�
                 kj = k - j
                 matrix[ij].h[kj] -= q * matrix[i].h[k]
             node[ij].A -= q * node[i].A
-        matrix[i].h[j] = q  # 更新して次の反復で使用
+            matrix[i].h[j] = q  # 更新して次の反復で使用
         node[i].A *= r
 
     # 後退代入
