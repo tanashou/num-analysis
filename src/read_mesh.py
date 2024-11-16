@@ -1,4 +1,4 @@
-from Fem2D import Elem, Node
+from fem2d import Elem, Node
 
 
 def ReadMesh(filename):  # メッシュの読み込み

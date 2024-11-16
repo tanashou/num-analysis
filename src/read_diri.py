@@ -1,4 +1,4 @@
-from Fem2D import Diri
+from fem2d import Diri
 
 
 def ReadDiri(filename):
