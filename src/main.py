@@ -1,12 +1,12 @@
-from ReadMesh import ReadMesh
-from ReadDiri import ReadDiri
-from CalcElem import CalcElem
-from CalcMatrix import CalcMatrix
-from CalcBand import CalcBand
-from SetBound import SetBound
-from SetCoef import SetCoef
-from Gauss import Gauss
-from Draw import Draw
+from read_mesh import ReadMesh
+from read_diri import ReadDiri
+from calc_elem import CalcElem
+from calc_matrix import CalcMatrix
+from calc_band import CalcBand
+from set_bounce import SetBound
+from set_coef import SetCoef
+from gauss import Gauss
+from draw import Draw
 
 nelem, elem, nnode, node = ReadMesh("mesh.dat")  # メッシュ読み込み
 ndiri, diri, nbound = ReadDiri("diri.dat")  # 境界条件読み込み

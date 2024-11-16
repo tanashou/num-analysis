@@ -1,4 +1,4 @@
-from Fem2D import Matrix
+from fem2d import Matrix
 
 
 def CalcBand(nelem, elem, np):  # バンド幅，係数行列の計算
