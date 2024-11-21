@@ -17,9 +17,11 @@
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-その後、依存関係をインストールするために以下を実行してください。
+本リポジトリをクローンし、依存関係をインストールします。
 
 ```shell
+git clone https://github.com/tanashou/num-analysis.git
+cd num-analysis
 uv sync
 ```
 
