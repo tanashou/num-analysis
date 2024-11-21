@@ -10,7 +10,7 @@
     ```shell
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
     ```
-    実行後、出てきた指示にパスを通してください。
+    実行後、出てきた指示にしたがってパスを通してください。(出てこない場合もある)
 
 -   macOS の場合
     ```shell
